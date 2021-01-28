@@ -1,0 +1,38 @@
+st1=input()
+st2=input()
+if (len(st1)==len(st2)):
+  n=int(input("enter no of input:"))
+  a=[]
+  i=0
+  while(i<n):
+    d=input("enter string: ")
+    if(len(d)==len(st1)):
+      a.append(d)
+      i+=1
+    else:
+      print("enter string of same length ")
+  tot=0
+  for x in range(n):
+  
+    count=len(st1)
+    for s in a[x]:
+      if not (s in st1):
+        count=count-1
+      
+    if (count==len(st1)-1):
+      tot+=1
+      print (a[x])
+      continue
+    
+    count=len(st2)
+    for s in a[x]:
+      if not (s in st2):
+        count=count-1
+
+    if (count==len(st2)-1):
+      tot+=1
+      print (a[x])
+    
+  print(tot)
+else:
+  print("enter words of same length:")
